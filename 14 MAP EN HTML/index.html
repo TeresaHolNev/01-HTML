@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemento MAP</title>
+</head>
+<body>
+    <h3>Ejemplo de empleo de MAP</h3>
+    <img src="./img/caceres.PNG" alt="Mapa de Cáceres"
+         usemap="#mapacaceres">
+    <map name="mapacaceres">
+        <area shape="rect" coords="0,0,300,300" 
+              href="noroeste.html" alt="Noroeste">
+        <area shape="rect" coords="300,0,600,300" 
+            href="noreste.html" alt="Noreste">
+        <area shape="rect" coords="300,300,600,600" 
+            href="sureste.html" alt="sureste">
+        <area shape="rect" coords="0,300,300,600" 
+            href="suroeste.html" alt="sureste">
+        <!-- Otras opciones de forma -->
+        <!-- Forma circular recibe coordenadas del centro
+        y radio en pixeles -->
+        <!-- <area shape="circle" coords="300,300,100"
+              href="noroeste.html">  -->
+        <!-- Forma poligonal recibe pares coordenadas -->
+        <!-- <area shape="poly" 
+              coords="200,200,400,200,500,400,400,400,200,400,100,400" 
+              href="noroeste.html" alt=""> -->
+    </map>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imágenes en HTML</title>
+    <!-- Favicon sencillo -->
+    <link rel="shortcut icon" href="favicon.ico" 
+          type="image/x-icon">
+</head>
+<body>
+    <!-- Imagen en formato jpg -->
+    <img src="img/caceres.jpg" alt="Imagen de Cáceres">
+    <!-- Imagen en formato png con atributos de tamaño -->
+    <div style="background-color: aquamarine;">
+        <img src="img/bob.png" alt="Bob Esponja" 
+             width="300" >  <!-- height="200" -->
+    </div>
+    <!-- Imagen en formato svg -->
+    <img src="img/instagram-logo.svg" 
+         alt="Logotipo Instagram" height="100">
+    <!-- Imagen en formato gif de tipo 'spinner'     -->
+    <img src="img/spinner.gif" 
+         alt="Cargando..." width="80">
+    <!-- Elemento picture para grupos de imagenes     -->
+    <picture>
+        <source media="(min-width: 600px)"
+                srcset="img/caceres_grande.jpg">
+        <source media="(min-width: 200px)"
+                srcset="img/caceres_peq.jpg">
+        <img src="caceres_peq.jpg" alt="caceres">
+    </picture>
+</body>
+</html>

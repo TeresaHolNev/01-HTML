@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+</head>
+<body>
+    <h3>Formulario con atributos Tabindex y Accesskey</h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"
+               tabindex="1">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos"
+               tabindex="3">
+        <label for="domicilio">Domicilio</label>
+        <input type="text" name="domicilio"
+               tabindex="2">
+        <label for="localidad">Localidad</label>
+        <input type="text" name="localidad"
+               tabindex="4" accesskey="k">
+               <!-- Accedemos con el atajo alt + k -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Empleo de eventos en botones</h3>
+    <button onclick="alert('¡Hola Mundo!')">
+        Saludo
+    </button>
+</body>
+</html>

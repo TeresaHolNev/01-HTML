@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body>
+    <style>
+        canvas {
+            border: solid 2px green;
+        }
+    </style>
+    <h3>Ejemplo básico Canvas</h3>
+    <canvas width="400" height="300"
+            id="canvas1"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas1");
+        var linea = canvas.getContext("2d");
+        linea.moveTo(20,20);
+        linea.lineTo(200,100);
+        linea.stroke();
+    </script>
+    <!-- librerías para gráficos canvas 
+         http://www.canvasjs.com 
+         http://www.chartjs.org -->
+</body>
+</html>

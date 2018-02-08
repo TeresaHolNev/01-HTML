@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Videos y Audio en HTML</title>
+</head>
+<body>
+   <!-- Ejemplo de video con atributos  -->
+   <video src="video/Magazine.mp4"
+          width="640" controls 
+          loop muted poster="img/portada.jpg">
+    <!-- Si usamos poster es conveniente quitar autoplay -->
+    </video>
+    <hr>
+    <!-- Ejemplo de fragmentos de video -->
+    <video src="video/Magazine.mp4#t=3,8"
+            width="640" controls autoplay
+            loop muted>
+    </video>
+    <hr>
+    <!-- Ejemplo de video con subtitulos -->
+    <video controls width="640">
+        <source src="video/Magazine.mp4">
+        <track src="video/subtitulos.vtt"
+               srclang="es" label="Español" default>
+        <track src="video/subtitulos.vtt"
+               srclang="en" label="English">
+    </video>
+    <hr>
+    <!-- Ejemplo de audio -->
+    <audio src="audio/prueba.mp3" controls 
+           autoplay></audio>
+    <!-- Atributo preload para audio o video -->
+    <audio src="audio/prueba.mp3" controls 
+           preload="none"></audio> 
+</body>
+</html>

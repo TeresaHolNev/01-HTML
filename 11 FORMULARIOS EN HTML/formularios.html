@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios en HTML</title>
+</head>
+<body>
+    <h3>
+        Formulario básico con elemento label, input 
+        y botón de envío.
+    </h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre">
+          <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario sin botón de envío</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="busqueda">Buscar</label>
+        <input type="search" name="busqueda"
+               placeholder="Complete su busqueda y
+                            pulse intro">
+    </form>
+    <hr>
+    <h3>Formulario varios campos y autofocus</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+          <!-- Primer campo para nombre -->
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" autofocus>
+          <!-- Segundo campo para apellidos -->
+          <label for="apellidos">Apellidos</label>
+          <input type="text" name="apellidos">
+          <!-- Botón de envío -->
+          <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con atributo disabled</h3>
+    <form name="persona" method="post" 
+    action="http://pagina.com/send.php">
+        <!-- Primer campo para nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Segundo campo para apellidos -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Ejemplo de campo deshabilitado -->
+        <label for="pais">Pais</label>
+        <input type="text" disabled 
+               name="pais" value="España">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar" disabled>
+    </form>
+    <hr>
+    <h3>Formulario con campo con atributo size</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+        <!-- Primer campo para nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" size=50>
+        <!-- Segundo campo para apellidos -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" size=50>
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con atributo maxlength</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+        <!-- Primer campo para nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" size=50
+               maxlength=8>
+        <!-- Segundo campo para apellidos -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" size=50>
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo de número</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+        <!-- Primer campo para nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Segundo campo para apellidos -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Tercer campo para edad -->
+        <label for="edad">Edad</label>
+        <input type="number" name="edad">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo número con atributos</h3>
+    <form name="compra" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="producto">Producto</label>
+        <input type="text" name="producto">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" name="cantidad"
+               step=10 min=10 max=100>
+        <input type="submit" value="Comprar">
+    </form>
+    <hr>
+    <h3>Formulario con campo para correo electrónico</h3>
+    <form name="persona" method="post" 
+          action="http://pagina.com/send.php">
+        <!-- Primer campo para nombre -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Segundo campo para apellidos -->
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Tercer campo para correo electrónico -->
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" name="correo">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo contraseña</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="user">Usuario</label>
+        <input type="text" name="user">
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass">
+        <!-- Botón de envío -->
+        <input type="submit" value="Inicio sesión">
+    </form>
+    <hr>
+    <h3>Formulario con campos obligatorios</h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="user">Usuario</label>
+        <input type="text" name="user" required>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" required>
+        <!-- Botón de envío -->
+        <input type="submit" value="Inicio sesión">
+    </form>
+    <hr>
+    <h3 title="Esto es un título">Formulario con atributo pattern</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="user">Usuario</label>
+        <input type="text" name="user" required>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" required
+               pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+               title="La contraseña debe tener al menos una 
+                      mayúscula, una minúscula y 1 número">
+        <!-- Botón de envío -->
+        <input type="submit" value="Inicio sesión">
+    </form>
+    <hr>
+    <h3>Formulario con campo de tipo URL</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="sitioweb">Sitio web (Introduzca el dato en formato
+                http://www.susitioweb.com)</label>
+        <input type="url" name="sitioweb" required
+               placeholder="http://www.susitioweb.com">
+        <!-- Botón de envío -->
+         <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo de tipo teléfono</h3>
+    <!-- Solo tiene soporte para Safari -->
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" name="telefono">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">      
+    </form>
+    <hr>
+    <h3>Formulario con campo de tipo teléfono 2</h3>
+    <!-- Con expressión regular -->
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono"
+               pattern="^(?:0|\(?\+34\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+               placeholder="comience por +34">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">      
+    </form>
+    <hr>
+    <h3>Formularios con campo de fecha</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="fechanac">Fecha de Nacimiento</label>
+        <input type="date" name="fechanac">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con campo de fecha mínima y máxima</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="fechanac">Fecha de Nacimiento</label>
+        <input type="date" name="fechanac"
+               min="1900-01-01" max="2018-12-31">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con campo de fecha y hora</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="inscripcion">Fecha de Inscripción</label>
+        <input type="datetime-local" name="inscripcion">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con campo de mes</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="mes">Mes de Inscripción</label>
+        <input type="month" name="mes">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con campo de semana</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="semana">Semana de Inscripción</label>
+        <input type="week" name="semana">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con campo de hora</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="hora">Hora de Inscripción</label>
+        <input type="time" name="hora">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formularios con radiobotones</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label>Hombre</label>
+        <input type="radio" name="sexo" 
+               value="hombre" required>
+        <label>Mujer</label>
+        <input type="radio" name="sexo" 
+               value="mujer" >
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con radiobotones premarcado</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label>Fútbol</label>
+        <input type="radio" name="deporte"
+               value="futbol" checked>
+        <label>Baloncesto</label>
+        <input type="radio" name="deporte"
+                value="baloncesto">
+        <label>Natación</label>
+        <input type="radio" name="deporte"
+                value="natacion">
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campos checkbox</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="mayor">Mayor de edad</label>
+        <input type="checkbox" name="mayor" value="Si">
+        <label for="fotografia">Fotografía</label>
+        <input type="checkbox" name="fotografia" value="Si">
+        <label for="senderismo">Senderismo</label>
+        <input type="checkbox" name="senderismo" value="Si">
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo de selección de color</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="tono">Seleccione su color</label>
+        <input type="color" name="tono"
+               value="#22d8ba">
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con campo de rango</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="rango">Seleccione...</label>
+        <input type="range" name="rango"
+               min="10" max="50" step="5"
+               value="10">
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con campo de selección 
+        de archivos.
+    </h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="archivo">Seleccione su archivo</label>
+        <input type="file" name="archivo" multiple>
+        <!-- Atributos para tipo file
+        Opciones para audio, video e imagenes
+        <input type="file" accept="audio/*">
+        <input type="file" accept="video/*">
+        <input type="file" accept="image/*">
+        Opción para un tipo de archivo concreto
+        <input type="file" accept=".pdf">
+        Opciones para dispositivos
+        <input type="file" accept="audio/*"
+               capture="microphone">
+        <input type="file" accept="video/*"
+               capture="camcorder">
+        <input type="file" accept="image/*"
+               capture="camera">   -->
+
+        <!-- botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con botón de tipo button.</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Botón de envío -->
+        <!-- Necesitaría un evento -->
+        <input type="button" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con botón de tipo image.</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <!-- Botón de envío -->
+        <input type="image" src="./img/dot-arrow.png"
+               alt="Botón de envío">
+    </form>
+    <hr>
+    <h3>Formulario con botón de reseteado
+        de todos los campos del formulario.</h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+        <!-- Botón de reseteado -->
+        <input type="reset" value="Resetear">
+    </form>
+</body>
+</html>
+

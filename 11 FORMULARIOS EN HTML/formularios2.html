@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios 2</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+</head>
+<body>
+    <style>
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border: none;
+        }
+        form {
+            padding-bottom: 40px;
+        }
+    </style>
+    <h2>Otros elementos para formularios.</h2>
+    <hr>
+    <h3>
+        Formulario con elemento button para 
+        botón de envío.
+    </h3>
+    <form name="login" method="post" 
+          action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <button type="submit">
+            Enviar <i class="fab fa-angellist"></i>
+        </button>
+    </form>
+    <hr>
+    <h3>
+        Formulario con elemento textarea.
+    </h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <label for="aficiones">Describa sus aficiones</label>
+        <textarea name="aficiones" 
+                  cols="80" rows="14">
+        </textarea>
+        <button type="submit">
+            Enviar <i class="fab fa-angellist"></i>
+        </button>
+    </form>
+    <hr>
+    <h3>
+        Formulario con elemento de selección.
+    </h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="marca">Seleccione marca</label>
+        <select name="marca">
+            <option value="Acer">Acer</option>
+            <option value="HP">HP</option>
+            <option value="Fujitsu">Fujitsu</option>
+            <option value="Apple">Apple</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>
+        Formulario con elemento de selección
+        y opciones agrupadas.
+    </h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="producto">Seleccione producto</label>
+        <select name="producto">
+            <optgroup label="Ordenadores">
+                <option value="PC">PC de Sobremesa</option>
+                <option value="portatil">Portátil</option>
+                <option value="mini">Mini</option>
+            </optgroup>
+            <optgroup label="Periféricos">
+                <option value="impresoras">Impresoras</option>
+                <option value="ratones">Ratones</option>                
+            </optgroup>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con elemento datalist.</h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <label for="deporte">Seleccione su deporte</label>
+        <input type="list" name="deporte"
+               list="listadeportes">
+        <datalist id="listadeportes">
+            <option value="Fútbol">Fútbol</option>
+            <option value="bct">Baloncesto</option>
+            <option value="Natación">Natación</option>
+        </datalist>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h3>Formulario con elemento progress y meter</h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <progress max="100" value="10">
+        </progress> Cargando...
+        <hr>
+        <meter min="0" low="20" high="80" max="100"
+               value="90"></meter> 90 %
+    </form>
+    <hr>
+    <h3>Formulario con elementos fieldset y legend</h3>
+    <form name="login" method="post" 
+            action="http://pagina.com/send.php">
+        <fieldset>
+            <legend>Nombre y Apellidos</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos">
+        </fieldset>
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="domicilio">Domicilio</label>
+            <input type="text" name="domicilio">
+            <label for="localidad">Localidad</label>
+            <input type="text" name="localidad">
+        </fieldset>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
